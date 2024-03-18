@@ -65,6 +65,14 @@ input{
     visibility: hidden;
 }
 
+.modalBox p{
+    font-size: 20px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #rank1:checked~#modal1,
 #rank2:checked~#modal2,
 #rank3:checked~#modal3,
