@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랭킹 영역의 리그 부분</title>
+    <link rel="stylesheet" href="league.css">
+</head>
+<body>
+    <div class="leagueArea">
+        <input type="radio" name="league" id="night" checked>
+        <input type="radio" name="league" id="week">
+        <input type="radio" name="league" id="dawn">
+        <input type="radio" name="rank" id="rank1" checked>
+        <input type="radio" name="rank" id="rank2">
+        <input type="radio" name="rank" id="rank3">
+        <input type="radio" name="rank" id="rank4">
+        <input type="radio" name="rank" id="rank5">
+        <input type="radio" name="rank" id="rank6">
+        <div class="league">
+            <label for="night" style="background-color: skyblue;">나이트리그</label>
+            <label for="week" style="background-color: yellowgreen;">주말리그</label>
+            <label for="dawn" style="background-color: pink;">새벽리그</label>
+        </div>
+        <div class="rank" id="nightRank">
+            <div><label for="rank1">투수순위1</label></div>
+            <div><label for="rank2">타자순위1</label></div>
+        </div>
+        <div class="rank" id="weekRank">
+            <div><label for="rank3">투수순위2</label></div>
+            <div><label for="rank4">타자순위2</label></div>
+        </div>
+        <div class="rank" id="dawnRank">
+            <div><label for="rank5">투수순위3</label></div>
+            <div><label for="rank6">타자순위3</label></div>
+        </div>
+        <div class="modalBox" id="modal1">
+            <p>1</p>
+        </div>
+        <div class="modalBox" id="modal2">
+            <p>2</p>
+        </div>
+        <div class="modalBox" id="modal3">
+            <p>3</p>
+        </div>
+        <div class="modalBox" id="modal4">
+            <p>4</p>
+        </div>
+        <div class="modalBox" id="modal5">
+            <p>5</p>
+        </div>
+        <div class="modalBox" id="modal6">
+            <p>6</p>
+        </div>
+    </div>
+</body>
+</html>
