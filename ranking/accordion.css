@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    display: none;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.accordion {
+    background: #eee;
+    border: 1px solid #999;
+    padding: 0 20px 24px;
+    width: 300px;
+    margin: 100px auto;
+}
+
+.accordion h2 {
+    margin: 12px 0;
+}
+
+.section {
+    border-bottom: 5px solid #eee;
+    padding: 0 20px;
+    background: #fff;
+}
+
+.section label {
+    display: block;
+    font-weight: 500;
+    padding: 15px 0;
+    font-weight: 700;
+}
+
+.section h3 + div {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in;
+}
+
+#one:checked~.one div,
+#two:checked~.two div,
+#thr:checked~.thr div,
+#fou:checked~.fou div,
+#fiv:checked~.fiv div,
+#six:checked~.six div{
+    height: 120px;
+}
