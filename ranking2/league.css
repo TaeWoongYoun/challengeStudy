@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.leagueArea{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.leagueBox{
+    width: 100%;
+    display: flex;
+}
+
+.league{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 900;
+}
+
+.league label{
+    display: block;
+}
+
+.rankBox{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    visibility: hidden;
+}
+
+.rank{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.rank label{
+    display: block;
+}
+
+#league1:checked~.rank1,
+#league2:checked~.rank2,
+#league3:checked~.rank3{
+    visibility: visible;
+}
+
+.modal{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 300px;
+    background-color: beige;
+    visibility: hidden;
+}
+
+#rank1:checked~.modal1,
+#rank2:checked~.modal2,
+#rank3:checked~.modal3,
+#rank4:checked~.modal4,
+#rank5:checked~.modal5,
+#rank6:checked~.modal6{
+    visibility: visible;
+}
