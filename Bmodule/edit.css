@@ -22,6 +22,11 @@
 .area{
     width: 100%;
     height: 329px;
-    background-color: aquamarine;
+    background-color: aliceblue;
     overflow: auto;
+}
+
+.imgContainer{
+    position: relative;
+    display: inline-block;
 }
