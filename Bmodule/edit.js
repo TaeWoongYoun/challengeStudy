@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#addBtn").click(function(){
-        var input = ("<input>").attr({type : "file", accept: "image/*"}).on("change", function(event){
+        var input = $("<input>").attr({type: "file", accept: "image/*"}).on("change", function(event){
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
@@ -14,29 +14,33 @@ $(document).ready(function(){
     });
 
     $("#textBtn").click(function(){
-        $(".textCotainer").show();
+        $(".textContainer").show();
     });
 
-    $("#addTextBtn").click(function(){
+    $("#addTextBtn").click(function() {
         var text = $("#textBox").val().trim();
-        if (text !== ""){
-            $(".imgContainer").append($("<p>").addClass(".text-on-image").text(text));
+        if (text !== "") {
+            $(".imgContainer").append($("<p>").addClass("text-on-image").text(text));
             $(".textContainer").hide();
         }
     });
 
-    $(document).on("mousedown", "text-on-image", function(event){
+    $("#rotateBtn").click(function(){
+        $(".text-on-=image").toggleClass("rotate");
+    });
+
+    $(document).on("mousedown", ".text-on-image", function(event){
         isDragging = true;
-        startX = event.clientX;
-        startY = event.clientY;
-        initialLeft = $(test).position().left;
-        initialTop = $(test).position().top;
+        stratX = event.clientX;
+        stratY = event.clientY;
+        initialLeft = $(this).position().left;
+        initialTop = $(this).position().top;
     }).on("mouseup", function(){
         isDragging = false;
     }).on("mousemove", function(event){
         if(isDragging){
-            let offsetX = event.clientX - startX;
-            let offsetY = event.clientY - startY;
+            let offsetX = event.clientX - stratX;
+            let offsetY = event.clientY - stratY;
             $(".text-on-image").css({left: initialLeft + offsetX + "px", top: initialTop + offsetY + "px"});
         }
     })
