@@ -15,9 +15,9 @@ $(document).ready(function(){
 
     $("#textBtn").click(function(){
         $(".textContainer").show();
-    })
+    });
 
-    $("#addTextBtn").click(function(){
+    $("#addTextBtn").click(function(event){
         var text = $("#textBox").val().trim();
         if (text !== ""){
             $(".imgContainer").append($("<p>").addClass("text-on-image").text(text));
@@ -29,7 +29,7 @@ $(document).ready(function(){
         $(".text-on-image").toggleClass("rotate");
     });
 
-    $(document).on("mousedown", ".text-on-image", function(event){
+    $(document).on("mousedown", ".text-on-image",function(event){
         isDragging = true;
         startX = event.clientX;
         startY = event.clientY;
@@ -39,22 +39,22 @@ $(document).ready(function(){
         isDragging = false;
     }).on("mousemove", function(event){
         if (isDragging) {
-            let offsetX = event.clientX - startX;
-            let offsetY = event.clientY - startY;
-            $(".text-on-image").css({left: initialLeft + offsetX + "px", top: initialTop + offsetY + "px"});
+        let offsetX = event.clientX - startX;
+        let offsetY = event.clientY - startY;
+        $(".text-on-image").css({left: initialLeft + offsetX + "px", top: initialTop + offsetY + "px"});
         }
     }).on("keydown", function(event){
-        if (event.ctrlKey && event.keyCode === 39){
+        if (event.ctrlKey && event.keyCode === 39) {
             $(".text-on-image").each(function(){
-                let rotation = ($(this).data("rotation") || 0) + 90;
+                let rotation = ($(this).data("rotation") || 0 ) + 90;
                 $(this).css("transform", "rotate(" + rotation + "deg)").data("rotation", rotation);
             });
-        };
+        }
     });
 
     $("#resetBtn, #deleteBtn").click(function(){
         $(".text-on-image").remove();
         $(".textContainer").hide();
-        if(this.id === "deleteBtn") $(".imgContainer").remove();
+        if (this.id === "deleteBtn") $(".imgContainer").remove();
     })
 });
