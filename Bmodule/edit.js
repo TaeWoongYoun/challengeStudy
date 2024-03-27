@@ -45,8 +45,10 @@ $(document).ready(function(){
         }
     }).on("keydown", function(event){
         if(event.ctrlKey && event.keyCode === 39) {
+            $(".text-on-image").each(function(){
             let rotation = ($(this).data("rotation") || 0) + 90;
             $(this).css("transform", "rotate(" + rotation + "deg)").data("rotation", rotation);
+            })
         }
     });
 
