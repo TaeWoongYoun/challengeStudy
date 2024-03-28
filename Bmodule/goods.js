@@ -12,21 +12,37 @@ var data = [
 ];
 
 function displayProducts(products){
+    $(".product").empty();
     products.forEach(product => {
-        var template = `
-            <div class="card">
+        var goods = `
+        <div class="card">
                 <div class="imgBox">
                     <img src="${product.img}" alt="">
                 </div>
                 <div class="textBox">
                     <h2>${product.title}</h2>
-                    <p>판매량:${product.sale}</p>
-                    <p>그룹:${product.group}</p>
-                    <button>가격:${product.price}</button>
+                    <p>그룹 : ${product.group}</p>
+                    <p>판매량 : ${product.sale}</p>
+                    <button>가격 : ${product.price}</button>
                 </div>
-            </div>`; 
-        $(".product").append(template);
+            </div>`
+        $(".product").append(goods);
     });
-};
+}
 
 displayProducts(data);
+
+$("#price").click(function(){
+    data.sort((a,b) => parseInt(a.price.replace(',', ''), 10) - parseInt(b.price.replace(',', ''), 10));
+    displayProducts(data);
+})
+
+$("#sale").click(function(){
+    data.sort((a,b) => a.sale - b.sale);
+    displayProducts(data);
+})
+
+$("#sale2").click(function(){
+    data.sort((a,b) => b.sale - a.sale);
+    displayProducts(data);
+})
