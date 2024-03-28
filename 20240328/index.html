@@ -10,13 +10,13 @@
     <input type="checkbox" id="calenderModal">
     <div class="headarea">
         <header>
-            <div class="logo">Skills baseball park</div>
+            <div class="logo"><a href="index.html">Skills baseball park</a></div>
             <nav>
                 <ul>
-                    <li><a href="#">information</a></li>
-                    <li><a href="#">statistics</a></li>
-                    <li><a href="#">reservation</a></li>
-                    <li><a href="#">goods</a></li>
+                    <li><a href="sub1.html">information</a></li>
+                    <li><a href="sub2.html">statistics</a></li>
+                    <li><a href="sub3.html">reservation</a></li>
+                    <li><a href="sub4.html">goods</a></li>
                 </ul>
             </nav>
             <div class="login">
@@ -72,7 +72,7 @@
                     생활체육인들이 모이는 곳
                     다양한 즐거움과<br>
                     감동을 선사하는 곳</p>
-                <button>Skills baseball park</button>
+                <button><a href="sub1.html">Skills baseball park</a></button>
             </div>
             <div class="calender">
                 <h2>< 2024년 4월 ></h2>
@@ -214,29 +214,98 @@
                     <h3>7.새칠타</h3>
                 </div>
             </div>
-            <div class="accodion">
-                <h3>주요 부문 TOP5</h3>
-                <div>
-                    <h3>타율 TOP5</h3>
+            <div class="accordion">
+                <input type="radio" name="acc" id="one">
+                <input type="radio" name="acc" id="two">
+                <input type="radio" name="acc" id="thr">
+                <input type="radio" name="acc" id="fou">
+                <input type="radio" name="acc" id="fiv">
+                <input type="radio" name="acc" id="six">
+                <h2>주요 부문 TOP5</h2>
+                <div class="section one">
+                    <h3><label for="one">타율 순위</label></h3>
+                    <div>
+                        <p>(1위) 일타율</p>
+                        <p>(2위) 이타율</p>
+                        <p>(3위) 삼타율</p>
+                        <p>(4위) 사타율</p>
+                        <p>(5위) 오타율</p>
+                    </div>
+                </div>  
+                <div class="section two">
+                    <h3><label for="two">홈런 순위</label></h3>
+                    <div>
+                        <p>(1위) 일홈런</p>
+                        <p>(2위) 이홈런</p>
+                        <p>(3위) 삼홈런</p>
+                        <p>(4위) 사홈런</p>
+                        <p>(5위) 오홈런</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>홈런 TOP5</h3>
+                <div class="section thr">
+                    <h3><label for="thr">다승 순위</label></h3>
+                    <div>
+                        <p>(1위) 일다승</p>
+                        <p>(2위) 이다승</p>
+                        <p>(3위) 삼다승</p>
+                        <p>(4위) 사다승</p>
+                        <p>(5위) 오다승</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>다승 TOP5</h3>
+                <div class="section fou">
+                    <h3><label for="fou">평균자책 순위</label></h3>
+                    <div>
+                        <p>(1위) 일평자</p>
+                        <p>(2위) 이평자</p>
+                        <p>(3위) 삼평자</p>
+                        <p>(4위) 사평자</p>
+                        <p>(5위) 오평자</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>평균자책 TOP5</h3>
+                <div class="section fiv">
+                    <h3><label for="fiv">탈삼진 순위</label></h3>
+                    <div>
+                        <p>(1위) 일삼진</p>
+                        <p>(2위) 이삼진</p>
+                        <p>(3위) 삼삼진</p>
+                        <p>(4위) 사삼진</p>
+                        <p>(5위) 오삼진</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>탈삼진 TOP5</h3>
-                </div>
-                <div>
-                    <h3>세이브 TOP5</h3>
+                <div class="section six">
+                    <h3><label for="six">세이브 순위</label></h3>
+                    <div>
+                        <p>(1위) 일세이</p>
+                        <p>(2위) 이세이</p>
+                        <p>(3위) 삼세이</p>
+                        <p>(4위) 사세이</p>
+                        <p>(5위) 오세이</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="goods">
+            <div><img src="images/01.jpg" alt="" style="cursor: e-resize;"></div>
+            <div><img src="images/05.jpg" alt=""></div>
+            <div><img src="images/28.jpg" alt=""></div>
+            <div><img src="images/49.jpg" alt=""></div>
+        </div>
+        <div class="gallery">
+            <button>이전</button>
+            <div class="galleryBox">
+                <ul>
+                    <li><img src="images/05.jpg" alt=""></li>
+                    <li><img src="images/13.jpg" alt=""></li>
+                    <li><img src="images/14.jpg" alt=""></li>
+                    <li><img src="images/27.jpg" alt=""></li>
+                    <li><img src="images/31.jpg" alt=""></li>
+                    <li><img src="images/51.jpg" alt=""></li>
+                </ul>
+            </div>
+            <button>다음</button>
+        </div>
     </div>
+
 
     <div class="modalBack">
         <div class="calenderModal">
@@ -244,7 +313,7 @@
             <h1>아직 게임이 없습니다.</h1>
         </div>
     </div>
-<!-- 
+
     <div class="footarea">
         <footer>
             <div class="logo">
@@ -259,6 +328,6 @@
                 Address: (12345) 서울특별서 중구 중북로 71
             </div>
         </footer>
-    </div> -->
+    </div>
 </body>
 </html>

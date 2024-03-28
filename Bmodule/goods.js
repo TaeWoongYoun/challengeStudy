@@ -11,6 +11,22 @@ var data = [
     {idx: 10, img: "goods/10.jpg", sale: 7267, title: "체육복바지", price: "10,000", group: "의류"}
 ];
 
-function displayProducts(product) {
-    
-}
+function displayProducts(products){
+    products.forEach(product => {
+        var template = `
+            <div class="card">
+                <div class="imgBox">
+                    <img src="${product.img}" alt="">
+                </div>
+                <div class="textBox">
+                    <h2>${product.title}</h2>
+                    <p>판매량:${product.sale}</p>
+                    <p>그룹:${product.group}</p>
+                    <button>가격:${product.price}</button>
+                </div>
+            </div>`; 
+        $(".product").append(template);
+    });
+};
+
+displayProducts(data);
