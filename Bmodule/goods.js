@@ -11,3 +11,6 @@ var data = [
     {idx: 10, img: "goods/10.jpg", sale: 7267, title: "체육복바지", price: "10,000", group: "의류"}
 ];
 
+function displayProducts(product) {
+    
+}
