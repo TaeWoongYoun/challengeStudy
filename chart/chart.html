@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>차트</title>
+    <link rel="stylesheet" href="chart.css">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <!-- 기능경기대회용 차트 -->
+    <div class="chartH">
+        <svg class="chart">
+            <!-- X축 -->
+            <line x1="50" y1="20" x2="400" y2="20" stroke="#000" />
+            <!-- Y축 -->
+            <line x1="50" y1="540" x2="50" y2="20" stroke="#000" />
+        
+            <!-- X축 -->
+            <text id="xLabel1" x="90" y="15">오전 10시</text>
+            <text id="xLabel2" x="193" y="15">오후 2시</text>
+            <text id="xLabel3" x="293" y="15">오후 4시</text>
+        
+            <!-- Y축 -->
+            <text x="20" y="530">500</text>
+            <text x="20" y="480">450</text>
+            <text x="20" y="430">400</text>
+            <text x="20" y="380">350</text>
+            <text x="20" y="330">300</text>
+            <text x="20" y="280">250</text>
+            <text x="20" y="230">200</text>
+            <text x="20" y="180">150</text>
+            <text x="20" y="130">100</text>
+            <text x="25" y="80">50</text>
+            <text x="30" y="30">0</text>
+        
+            <!-- 데이터 바 -->
+            <rect class="bar" id="bar1" x="100" y="20" width="50" height="0"></rect>
+            <rect class="bar" id="bar2" x="200" y="20" width="50" height="0"></rect>
+            <rect class="bar" id="bar3" x="300" y="20" width="50" height="0"></rect>
+        </svg>
+
+        <div class="league">
+            <div onclick="changeLeague('나이트리그')">나이트리그</div>
+            <div onclick="changeLeague('주말리그')">주말리그</div>
+            <div onclick="changeLeague('새벽리그')">새벽리그</div>
+        </div>
+
+        <div class="btnH">
+            <button onclick="updateChart('월')">월</button>
+            <button onclick="updateChart('화')">화</button>
+            <button onclick="updateChart('수')">수</button>
+            <button onclick="updateChart('목')">목</button>
+            <button onclick="updateChart('금')">금</button>
+            <button onclick="updateChart('토')">토</button>
+            <button onclick="updateChart('일')">일</button>
+        </div>
+    </div>
+
+    <script src="chart.js"></script>
+</body>
+</html>

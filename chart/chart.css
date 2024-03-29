@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.bar {
+    fill: steelblue;
+    transition: height 0.8s ease-in;
+}
+
+.chart{
+    width: 450px;
+    height: 550px;
+    border: 1px black solid;
+}
+
+.chartH{
+    width: 450px;
+    height: 600px;
+    margin: 10px;
+}
+
+.league{
+    width: 450px;
+    height: 50px;
+    display: flex;
+}
+
+.league > div{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: antiquewhite;
+}
+
+.btnH{
+    margin-top: 10px;
+    width: 450px;    
+    display: flex;
+    justify-content: space-around;
+}
+
+.chartH button{
+    width: 50px;
+    height: 30px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-radius: 10px;
+    border: none;
+}
