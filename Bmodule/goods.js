@@ -15,17 +15,17 @@ function displayProducts(products){
     $(".product").empty();
     products.forEach(product => {
         let goods = `
-        <div class="card">
-            <div class="imgBox">
-                <img src="${product.img}" alt="">
-            </div>
-            <div class="textBox">
-                <h2>${product.title}</h2>
-                <p>그룹 : ${product.group}</p>
-                <p>판매량 : ${product.sale}</p>
-                <button>가격 : ${product.price}</button>
-            </div>
-        </div>`
+            <div class="card">
+                <div class="imgBox">
+                    <img src="${product.img}" alt="">
+                </div>
+                <div class="textBox">
+                    <h2>${product.title}</h2>
+                    <p>그룹 : ${product.group}</p>
+                    <p>판매량 : ${product.sale}</p>
+                    <button>가격 : ${product.price}</button>
+                </div>
+            </div>`
         $(".product").append(goods);
     });
 }
@@ -34,15 +34,15 @@ displayProducts(data);
 
 $("#price").click(function(){
     data.sort((a,b) => parseInt(a.price.replace(",", ""), 10) - parseInt(b.price.replace(",", ""), 10));
-    displayProducts(data)
+    displayProducts(data);
 })
 
 $("#sale").click(function(){
-    data.sort((a,b) => a.sale - b.sale)
-    displayProducts(data)
+    data.sort((a,b) => a.sale - b.sale);
+    displayProducts(data);
 })
 
 $("#sale2").click(function(){
-    data.sort((a,b) => b.sale - a.sale)
-    displayProducts(data)
+    data.sort((a,b) => b.sale - a.sale);
+    displayProducts(data);
 })
