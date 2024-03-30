@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>굿즈 영역</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="goods.css">
+</head>
+<body>
+    <!-- 상품판매 소요시간 95분 -->
+    <div class="btnarea">
+        <div class="logo">
+            <p>굿즈 판매 영역</p>
+        </div>
+        <div class="btnBox">
+            <button id="price">가격</button>
+            <button id="sale">판매량 오름차순</button>
+            <button id="sale2">판매량 내림차순</button>
+            <button>목록상자
+                <select name="" id="">
+                    <option>전체</option>
+                    <option>의류</option>
+                    <option>악세사리</option>
+                    <option>응원도구</option>
+                    <option>야구용품</option>
+                </select>
+            </button>
+            <button>상품 정보 리스트</button>
+        </div>
+        <div class="box">
+            <button id="modal">편집영역</button>
+            <div class="back">
+                <div class="area">
+                    <div class="buttonBox">
+                        <button id="addBtn">추가버튼</button>
+                        <button id="textBtn">글상자버튼</button>
+                        <button id="rotateBtn">글상자 이동 및 회전버튼</button>
+                        <button id="resetBtn">원래대로버튼</button>
+                        <button id="deleteBtn">삭제버튼</button>
+                        <button>다운로드버튼</button>
+                    </div>
+                </div>
+
+                <div class="textContainer">
+                    <textarea class="textInput"></textarea>
+                    <button id="addTextBtn">이미지 추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="best">
+        <h2>판매량 BEST TOP3</h2>
+        <div class="bestBox">
+            <div class="card">
+                <img src="goods/09.jpg" alt="">
+                <div class="textBox">
+                    <h2>세트</h2>
+                    <p>그룹 : 야구용품</p>
+                    <p>판매량 : 54267</p>
+                    <button>가격 : 115,500</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="goods/07.jpg" alt="">
+                <div class="textBox">
+                    <h2>베트</h2>
+                    <p>그룹 : 야구용품</p>
+                    <p>판매량 : 27000</p>
+                    <button>가격 : 32,500</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="goods/04.jpg" alt="">
+                <div class="textBox">
+                    <h2>응원풍선</h2>
+                    <p>그룹 : 응원도구</p>
+                    <p>판매량 : 17511</p>
+                    <button>가격 : 12,500</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        
+    </div>
+
+    <script src="goods.js"></script>
+</body>
+</html>
