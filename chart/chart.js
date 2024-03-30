@@ -13,14 +13,14 @@ function updateChart(day){
 function changeLeague(league){
     const index = ["나이트리그", "주말리그", "새벽리그"].indexOf(league);
     $(".league div").removeClass("select").eq(index).addClass("select");
-    const labels = {
+    const labels ={
         "나이트리그": ["오후 6시", "오후 10시", ""],
         "주말리그": ["오전 10시", "오후 2시", "오후 4시"],
         "새벽리그": ["오전 4시", "오전 7시", ""]
     }
     setText(labels[league][0],labels[league][1],labels[league][2],);
     if (league === "새벽리그") $("#bar3").attr("height", 0);
-    updateChart("월");
+    chartData("월");
 }
 
 function setText(label1,label2,label3){
