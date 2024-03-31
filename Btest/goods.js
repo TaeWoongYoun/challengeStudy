@@ -110,3 +110,4 @@ $(document).ready(function(){
         if (this.id === "deleteBtn") $(".imgContainer").remove();
     })
 })
+
