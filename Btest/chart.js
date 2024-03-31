@@ -16,14 +16,6 @@ function changeLeague(league){
     const labels = {
         "나이트리그": ["오후 6시", "오후 10시", ""],
         "주말리그": ["오전 10시", "오후 2시", "오후 4시"],
-        "새벽리그": ["오전 4시", "오전 7시" ,""]
+        "새벽리그"
     }
-    setText(labels[league][0],labels[league][1],labels[league][2]);
-    updateChart("월");
-}
-
-function setText(label1,label2,label3){
-    $("#xLabel1").text(label1);
-    $("#xLabel2").text(label2);
-    $("#xLabel3").text(label3);
 }
