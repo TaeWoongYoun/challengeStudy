@@ -14,27 +14,26 @@ var data = [
 function displayProducts(products){
     $(".product").empty();
     products.forEach(product => {
-        var goods = `
-        <div class="card">
-            <img src="${product.img}" alt="">
-            <div class="textBox">
-                <h2>${product.title}</h2>
-                <p>그룹 : ${product.group}</p>
-                <p>판매량 : ${product.sale}</p>
-                <button>가격 : ${product.price}</button>
-            </div>
-        </div>`
+        let goods = `
+            <div class="card">
+                <img src="${product.img}" alt="">
+                <div class="textBox">
+                    <h2>${product.title}</h2>
+                    <p>그룹 : ${product.group}</p>
+                    <p>판매량 : ${product.sale}</p>
+                    <button>가격 : ${product.price}</button>
+                </div>
+            </div>`
         $(".product").append(goods);
     });
 }
-
 data.sort((a,b) => b.sale - a.sale);
 displayProducts(data);
 
 $("#price").click(function(){
     data.sort((a,b) => parseInt(a.price.replace(",", ""), 10) - parseInt(b.price.replace(",", ""), 10));
     displayProducts(data);
-});
+})
 
 $("#sale").click(function(){
     data.sort((a,b) => a.sale - b.sale);
@@ -54,8 +53,8 @@ $(document).ready(function(){
     $("#addBtn").click(function(){
         var input = $("<input>").attr({type: "file", accept: "image/*"}).on("change", function(event){
             var file = event.target.files[0];
-            if(file){
-                var reader = new FileReader();
+            if (file) {
+                var reader = new FileReader;
                 reader.onload = function(){
                     $(".area").append($("<div>").addClass("imgContainer").append($("<img>").attr("src", reader.result)));
                 };
@@ -63,7 +62,7 @@ $(document).ready(function(){
             }
         });
         input.click();
-    });
+    })
 
     $("#textBtn").click(function(){
         $(".textContainer").show();
@@ -90,17 +89,17 @@ $(document).ready(function(){
     }).on("mouseup", function(){
         isDragging = false;
     }).on("mousemove", function(event){
-        if(isDragging){
+        if (isDragging){
             let offsetX = event.clientX - startX;
             let offsetY = event.clientY - startY;
             $(".text-on-image").css({left: initialLeft + offsetX + "px", top: initialTop + offsetY + "px"});
         }
     }).on("keydown", function(event){
-        if(event.ctrlKey && event.keyCode === 39){
+        if (event.ctrlKey && event.keyCode === 39){
             $(".text-on-image").each(function(){
                 let rotation = ($(this).data("rotation") || 0) + 90;
                 $(this).css("transform", "rotate(" + rotation + "deg)").data("rotation", rotation);
-            })
+            });
         }
     });
 
@@ -110,4 +109,3 @@ $(document).ready(function(){
         if (this.id === "deleteBtn") $(".imgContainer").remove();
     })
 })
-
