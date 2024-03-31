@@ -9,6 +9,50 @@
 </head>
 <body>
     
+    <div class="chartH">
+        <svg class="chart">
+            <!-- X축 -->
+            <line x1="50" x2="400" y1="30" y2="30" stroke="#000"></line>
+            <!-- Y축 -->
+            <line x1="50" x2="50" y1="30" y2="540" stroke="#000"></line>
+
+            <text id="xLabel1" x="80" y="20">오전 10시</text>
+            <text id="xLabel1" x="200" y="20">오후 2시</text>
+            <text id="xLabel1" x="320" y="20">오후 4시</text>
+
+            <rect width="50" height="0" x="90" y="30" class="bar" id="bar1"></rect>
+            <rect width="50" height="0" x="205" y="30" class="bar" id="bar2"></rect>
+            <rect width="50" height="0" x="325" y="30" class="bar" id="bar3"></rect>
+
+            <text x="35" y="40">0</text>
+            <text x="25" y="90">50</text>
+            <text x="20" y="140">100</text>
+            <text x="20" y="190">150</text>
+            <text x="20" y="240">200</text>
+            <text x="20" y="290">250</text>
+            <text x="20" y="340">300</text>
+            <text x="20" y="390">350</text>
+            <text x="20" y="440">400</text>
+            <text x="20" y="490">450</text>
+            <text x="20" y="540">500</text>
+        </svg>
+
+        <div class="league">
+            <div onclick="changeLeague('나이트리그')">나이트리그</div>
+            <div onclick="changeLeague('주말리그')">주말리그</div>
+            <div onclick="changeLeague('새벽리그')">새벽리그</div>
+        </div>
+
+        <div class="btnH">
+            <button onclick="updateChart('월')">월</button>
+            <button onclick="updateChart('화')">화</button>
+            <button onclick="updateChart('수')">수</button>
+            <button onclick="updateChart('목')">목</button>
+            <button onclick="updateChart('금')">금</button>
+            <button onclick="updateChart('토')">토</button>
+            <button onclick="updateChart('일')">일</button>
+        </div>
+    </div>
 
     <script src="chart.js"></script>
 </body>
