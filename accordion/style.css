@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.accordion{
+    width: 300px;
+    height: 550px;
+    border: 1px solid black;
+    margin: 50px;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.accordion > h2{
+    padding: 0 10px 10px;
+}
+
+.section{
+    padding: 0 20px;
+    background-color: aliceblue;
+    border-bottom: 5px solid #ddd;
+}
+
+.section h3{
+    line-height: 50px;
+}
+
+label{
+    display: block;
+}
+
+.section h3 + div{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+#one:checked~.one div,
+#two:checked~.two div,
+#three:checked~.three div,
+#four:checked~.four div,
+#five:checked~.five div,
+#six:checked~.six div{
+    height: 170px;
+}
