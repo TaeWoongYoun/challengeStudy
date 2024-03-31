@@ -3,31 +3,34 @@
     margin: 0;
 }
 
+input{
+    display: none;
+}
+
 .accordion{
     width: 300px;
     height: 550px;
-    border: 1px solid black;
-    margin: 50px;
-    padding: 20px;
     background-color: #ddd;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
 }
 
 .accordion > h2{
-    padding: 0 10px 10px;
+    padding: 10px;
 }
 
 .section{
-    padding: 0 20px;
+    padding: 10px;
     background-color: aliceblue;
     border-bottom: 5px solid #ddd;
 }
 
 .section h3{
-    line-height: 50px;
-}
-
-label{
-    display: block;
+    line-height: 30px;
 }
 
 .section h3 + div{
@@ -36,11 +39,15 @@ label{
     transition: height 0.5s;
 }
 
+label{
+    display: block;
+}
+
 #one:checked~.one div,
 #two:checked~.two div,
 #three:checked~.three div,
 #four:checked~.four div,
 #five:checked~.five div,
 #six:checked~.six div{
-    height: 170px;
+    height: 150px;
 }
