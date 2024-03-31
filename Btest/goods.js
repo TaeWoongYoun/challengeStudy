@@ -26,7 +26,7 @@ function displayProducts(products){
             </div>`
         $(".product").append(goods);
     });
-}
+};
 data.sort((a,b) => b.sale - a.sale);
 displayProducts(data);
 
@@ -54,19 +54,19 @@ $(document).ready(function(){
         var input = $("<input>").attr({type: "file", accept: "image/*"}).on("change", function(event){
             var file = event.target.files[0];
             if (file) {
-                var reader = new FileReader;
+                var reader = new FileReader();
                 reader.onload = function(){
                     $(".area").append($("<div>").addClass("imgContainer").append($("<img>").attr("src", reader.result)));
                 };
                 reader.readAsDataURL(file);
             }
         });
-        input.click();
-    })
+        input.click()
+    });
 
     $("#textBtn").click(function(){
         $(".textContainer").show();
-    });
+    })
 
     $("#addTextBtn").click(function(){
         var text = $(".textInput").val().trim();
@@ -74,11 +74,11 @@ $(document).ready(function(){
             $(".imgContainer").append($("<p>").addClass("text-on-image").text(text));
             $(".textContainer").hide();
         }
-    });
+    })
 
     $("#rotateBtn").click(function(){
         $(".text-on-image").toggleClass("rotate");
-    });
+    })
 
     $(document).on("mousedown", ".text-on-image", function(event){
         isDragging = true;
@@ -89,7 +89,7 @@ $(document).ready(function(){
     }).on("mouseup", function(){
         isDragging = false;
     }).on("mousemove", function(event){
-        if (isDragging){
+        if (isDragging) {
             let offsetX = event.clientX - startX;
             let offsetY = event.clientY - startY;
             $(".text-on-image").css({left: initialLeft + offsetX + "px", top: initialTop + offsetY + "px"});
@@ -97,7 +97,7 @@ $(document).ready(function(){
     }).on("keydown", function(event){
         if (event.ctrlKey && event.keyCode === 39){
             $(".text-on-image").each(function(){
-                let rotation = ($(this).data("rotation") || 0) + 90;
+                let rotation = ($(this).data("rotation") || 0 ) + 90;
                 $(this).css("transform", "rotate(" + rotation + "deg)").data("rotation", rotation);
             });
         }
