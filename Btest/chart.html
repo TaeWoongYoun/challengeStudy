@@ -9,41 +9,39 @@
 </head>
 <body>
     
-    <div class="chartH">
-        <svg class="chart">
-            <!-- X축 -->
-            <line x1="50" x2="400" y1="30" y2="30" stroke="#000"></line>
-            <!-- Y축 -->
-            <line x1="50" x2="50" y1="30" y2="540" stroke="#000"></line>
-
-            <text id="xLabel1" x="80" y="20">오전 10시</text>
-            <text id="xLabel1" x="200" y="20">오후 2시</text>
-            <text id="xLabel1" x="320" y="20">오후 4시</text>
-
-            <rect width="50" height="0" x="90" y="30" class="bar" id="bar1"></rect>
-            <rect width="50" height="0" x="205" y="30" class="bar" id="bar2"></rect>
-            <rect width="50" height="0" x="325" y="30" class="bar" id="bar3"></rect>
-
-            <text x="35" y="40">0</text>
-            <text x="25" y="90">50</text>
-            <text x="20" y="140">100</text>
-            <text x="20" y="190">150</text>
-            <text x="20" y="240">200</text>
-            <text x="20" y="290">250</text>
-            <text x="20" y="340">300</text>
-            <text x="20" y="390">350</text>
-            <text x="20" y="440">400</text>
-            <text x="20" y="490">450</text>
-            <text x="20" y="540">500</text>
-        </svg>
-
-        <div class="league">
-            <div onclick="changeLeague('나이트리그')">나이트리그</div>
-            <div onclick="changeLeague('주말리그')">주말리그</div>
-            <div onclick="changeLeague('새벽리그')">새벽리그</div>
-        </div>
-
-        <div class="btnH">
+    <div class="chartarea">
+        <div class="chartH">
+            <svg class="chart">
+                <line x1="30" x2="430" y1="30" y2="30" stroke="#000"></line>
+                <line x1="30" x2="30" y1="30" y2="580" stroke="#000"></line>
+    
+                <text x="60" y="20" id="xLabel1">오전 10시</text>
+                <text x="200" y="20" id="xLabel2">오후 2시</text>
+                <text x="330" y="20" id="xLabel3">오후 4시</text>
+    
+                <text x="10" y="40">0</text>
+                <text x="5" y="90">50</text>
+                <text x="0" y="140">100</text>
+                <text x="0" y="190">150</text>
+                <text x="0" y="240">200</text>
+                <text x="0" y="290">250</text>
+                <text x="0" y="340">300</text>
+                <text x="0" y="390">350</text>
+                <text x="0" y="440">400</text>
+                <text x="0" y="490">450</text>
+                <text x="0" y="540">500</text>
+    
+                <rect x="70" y="30" width="50px" height="0px" class="bar" id="bar1"></rect>
+                <rect x="205" y="30" width="50px" height="0px" class="bar" id="bar2"></rect>
+                <rect x="335" y="30" width="50px" height="0px" class="bar" id="bar3"></rect>
+            </svg>
+    
+            <div class="league">
+                <div onclick="changeLeague('나이트리그')">나이트리그</div>
+                <div onclick="changeLeague('주말리그')">주말리그</div>
+                <div onclick="changeLeague('새벽리그')">새벽리그</div>
+            </div>
+    
             <button onclick="updateChart('월')">월</button>
             <button onclick="updateChart('화')">화</button>
             <button onclick="updateChart('수')">수</button>
@@ -51,6 +49,47 @@
             <button onclick="updateChart('금')">금</button>
             <button onclick="updateChart('토')">토</button>
             <button onclick="updateChart('일')">일</button>
+        </div>
+
+        <div class="chartW">
+            <svg class="chart2">
+                <line x1="80" x2="630" y1="420" y2="420" stroke="#000"></line>
+                <line x1="80" x2="80" y1="30" y2="420" stroke="#000"></line>
+
+                <text x="5" y="100" id="xLabel12">오전 10시</text>
+                <text x="10" y="225" id="xLabel22">오후 2시</text>
+                <text x="10" y="350" id="xLabel32">오후 4시</text>
+
+                <text x="90" y="440">0</text>
+                <text x="140" y="440">50</text>
+                <text x="190" y="440">100</text>
+                <text x="240" y="440">150</text>
+                <text x="290" y="440">200</text>
+                <text x="340" y="440">250</text>
+                <text x="390" y="440">300</text>
+                <text x="440" y="440">350</text>
+                <text x="490" y="440">400</text>
+                <text x="540" y="440">450</text>
+                <text x="590" y="440">500</text>
+
+                <rect x="80" y="70" width="0px" height="50px" class="bar2" id="bar12"></rect>
+                <rect x="80" y="195" width="0px" height="50px" class="bar2" id="bar22"></rect>
+                <rect x="80" y="320" width="0px" height="50px" class="bar2" id="bar32"></rect>
+            </svg>
+
+            <div class="league2">
+                <div onclick="changeLeague2('나이트리그')">나이트리그</div>
+                <div onclick="changeLeague2('주말리그')">주말리그</div>
+                <div onclick="changeLeague2('새벽리그')">새벽리그</div>
+            </div>
+    
+            <button onclick="updateChart2('월')">월</button>
+            <button onclick="updateChart2('화')">화</button>
+            <button onclick="updateChart2('수')">수</button>
+            <button onclick="updateChart2('목')">목</button>
+            <button onclick="updateChart2('금')">금</button>
+            <button onclick="updateChart2('토')">토</button>
+            <button onclick="updateChart2('일')">일</button>
         </div>
     </div>
 

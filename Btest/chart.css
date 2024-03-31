@@ -3,23 +3,46 @@
     margin: 0;
 }
 
+.bar, .bar2{
+    transition: all 1s;
+}
+
+.chartarea{
+    width: 1320px;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .chartH{
     width: 450px;
     height: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .chart{
-    margin-top: 25px;
     width: 450px;
-    height: 550px;
-    border: 1px black solid;
+    height: 600px;
+    border: 1px solid black;
 }
 
-.bar {
-    fill: steelblue;
-    transition: height 0.8s;
+.league{
+    width: 450px;
+    display: flex;
+}
+
+.league div{
+    width: 150px;
+    text-align: center;
+}
+
+.chartW{
+    width: 700px;
+    height: 450px;
+}
+
+.chart2{
+    width: 700px;
+    height: 450px;
+    border: 1px solid black;
 }
