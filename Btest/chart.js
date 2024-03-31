@@ -4,6 +4,16 @@ const chartData = {
     "새벽리그": { "월": [20, 40, 0], "화": [21, 41, 0], "수": [30, 33, 0], "목": [32, 38, 0], "금": [25, 29, 0], "토": [30, 37, 0], "일": [29, 39, 0] }
 };
 
+$("#height").click(function(){
+    $(".chartH").show();
+    $(".chartW").hide();
+})
+
+$("#width").click(function(){
+    $(".chartW").show();
+    $(".chartH").hide();
+})
+
 function updateChart(day){
     const league = $(".select").text().trim();
     const data= chartData[league][day];
