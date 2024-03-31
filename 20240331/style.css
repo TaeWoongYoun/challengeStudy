@@ -100,7 +100,11 @@ nav ul li:hover{
     color: aliceblue;
     border-radius: 10px;
     font-weight: 900;
+}
 
+.headerNone{
+    width: 100%;
+    height: 70px;
 }
 
 .back{
