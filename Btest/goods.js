@@ -26,7 +26,7 @@ function displayProducts(products){
             </div>`
         $(".product").append(goods);
     });
-};
+}
 data.sort((a,b) => b.sale - a.sale);
 displayProducts(data);
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
                 reader.readAsDataURL(file);
             }
         });
-        input.click()
+        input.click();
     });
 
     $("#textBtn").click(function(){
@@ -99,7 +99,7 @@ $(document).ready(function(){
             $(".text-on-image").each(function(){
                 let rotation = ($(this).data("rotation") || 0 ) + 90;
                 $(this).css("transform", "rotate(" + rotation + "deg)").data("rotation", rotation);
-            });
+            })
         }
     });
 
