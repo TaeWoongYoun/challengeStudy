@@ -59,15 +59,13 @@ $(document).ready(function(){
                     $(".area").append($("<div>").addClass("imgContainer").append($("<img>").attr("src", reader.result)));
                 };
                 reader.readAsDataURL(file);
-            }
+            };
         });
         input.click();
-    });
-
+    })
     $("#textBtn").click(function(){
         $(".textContainer").show();
     })
-
     $("#addTextBtn").click(function(){
         var text = $(".textInput").val().trim();
         if (text !== ""){
@@ -75,11 +73,9 @@ $(document).ready(function(){
             $(".textContainer").hide();
         }
     })
-
     $("#rotateBtn").click(function(){
         $(".text-on-image").toggleClass("rotate");
     })
-
     $(document).on("mousedown", ".text-on-image", function(event){
         isDragging = true;
         startX = event.clientX;
@@ -87,7 +83,7 @@ $(document).ready(function(){
         initialLeft = $(this).position().left;
         initialTop = $(this).position().top;
     }).on("mouseup", function(){
-        isDragging = false;
+        isDragging = false
     }).on("mousemove", function(event){
         if (isDragging) {
             let offsetX = event.clientX - startX;
@@ -95,14 +91,13 @@ $(document).ready(function(){
             $(".text-on-image").css({left: initialLeft + offsetX + "px", top: initialTop + offsetY + "px"});
         }
     }).on("keydown", function(event){
-        if (event.ctrlKey && event.keyCode === 39){
+        if (event.ctrlKey && event.keyCode === 39) {
             $(".text-on-image").each(function(){
                 let rotation = ($(this).data("rotation") || 0 ) + 90;
                 $(this).css("transform", "rotate(" + rotation + "deg)").data("rotation", rotation);
-            })
+            });
         }
     });
-
     $("#resetBtn, #deleteBtn").click(function(){
         $(".text-on-image").remove();
         $(".textContainer").hide();
