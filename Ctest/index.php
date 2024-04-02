@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <button id="join">회원가입</button>
+    <button id="login">로그인</button>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </body>
 </html>
