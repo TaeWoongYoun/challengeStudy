@@ -14,11 +14,12 @@ $("#width").click(function(){
     $(".chartH").hide();
 })
 
+
 function updateChart(day){
     const league = $(".select").text().trim();
-    const data= chartData[league][day];
+    const data = chartData[league][day];
     $(".bar").each((i, element) => $(element).attr("height", data[i]));
-};
+}
 
 function changeLeague(league){
     const index = ["나이트리그", "주말리그", "새벽리그"].indexOf(league);
@@ -27,7 +28,7 @@ function changeLeague(league){
         "나이트리그": ["오후 6시", "오후 10시", ""],
         "주말리그": ["오전 10시", "오후 2시", "오후 4시"],
         "새벽리그": ["오전 4시", "오전 7시", ""]
-    }
+    };
     setText(labels[league][0],labels[league][1],labels[league][2]);
     updateChart("월");
 }
@@ -36,7 +37,7 @@ function setText(label1,label2,label3){
     $("#xLabel1").text(label1);
     $("#xLabel2").text(label2);
     $("#xLabel3").text(label3);
-}
+};
 
 function updateChart2(day) {
     const league = $(".select2").text().trim(); // 클래스 select2로 수정
